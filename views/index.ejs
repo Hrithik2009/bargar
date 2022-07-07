@@ -33,7 +33,13 @@
 							<h1>Delicious Burgers</h1>
 							<div class="hero-btns">
 								<a href="shop" class="boxed-btn">Burgers Collection</a>
+								<% if(user) { %>
+								<form id = "logout" action="/logout" method="POST">
+									<a onclick="document.getElementById('logout').submit()" href="#" class="bordered-btn">Logout</a>
+								</form>
+								<% } else { %>
 								<a href="login" class="bordered-btn">Login</a>
+								<% } %>
 							</div>
 						</div>
 					</div>
